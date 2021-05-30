@@ -11,20 +11,21 @@ Instalar dependencias de npm
 ## Crear AWS CLI y configurarlo
 
 Nos dirigimos a la parte “Usuarios”, y le damos a “Crear nuevo usuario” o “Añadir nuevo usuario”
-• Le ponemos el nombre que deseemos al usuario
-• Seleccionamos “Acceso mediante programación”
-• “Siguiente Permisos”
-• “Asociar directamente las políticas existentes”
-• Filtramos las políticas que vamos a usar, y las seleccionamos:
-o AmazonDynamoDBFullAccess
-o AWSLambda_FullAccess
-o AmazonS3FullAccess
-o AmazonAPIGatewayAdministrator
-o AWSLambdaDynamoDBExecutionRole
-• Siguiente Etiquetas
-• Siguiente Revisar
-• Crear Usuario
-• IMPORTANTE: Copiar en un lugar seguro el ID de acceso y clave secreta.
+1. Le ponemos el nombre que deseemos al usuario
+2. Seleccionamos “Acceso mediante programación”
+3. “Siguiente Permisos”
+4. “Asociar directamente las políticas existentes”
+5. Filtramos las políticas que vamos a usar, y las seleccionamos:
+6. AmazonDynamoDBFullAccess
+7. AWSLambda_FullAccess
+8. AmazonS3FullAccess
+9. AmazonAPIGatewayAdministrator
+10. AWSLambdaDynamoDBExecutionRole
+11. Siguiente Etiquetas
+12. Siguiente Revisar
+13. Crear Usuario
+
+### IMPORTANTE: Copiar en un lugar seguro el ID de acceso y clave secreta.
 
 ## CONFIGURAR CREDENCIALES
 
