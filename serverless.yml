@@ -1,0 +1,41 @@
+
+service: api-indra-culebra
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: us-east-1
+
+functions:
+  insertar:
+    handler: handler.insertar    
+    events:
+      - http:
+          path: insertar
+          method: post
+          cors: true
+  obtener:
+    handler: handler.obtener    
+    events:
+      - http:
+          path: obtener
+          method: get
+          cors: true  
+
+resources: # CloudFormation template syntax
+  Resources:
+    usersTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: materias
+        AttributeDefinitions:
+          - AttributeName: materia_id
+            AttributeType: N
+        KeySchema:
+          - AttributeName: materia_id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
